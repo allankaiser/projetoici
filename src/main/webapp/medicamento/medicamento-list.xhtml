@@ -1,0 +1,129 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/templates/template.xhtml">
+
+    <ui:define name="titulo">Medicamentos</ui:define>
+
+    <ui:define name="conteudo">
+
+        <h:form id="formMedicamento">
+            <p:messages autoUpdate="true" />
+
+            <p:panel header="Cadastro de Medicamentos">
+
+                <!-- Toolbar com novo e filtro -->
+                <p:toolbar>
+                    <p:toolbarGroup>
+                        <p:commandButton value="Novo" icon="pi pi-plus"
+                                         action="#{medicamentoBean.novo}"
+                                         oncomplete="PF('dlgMedicamento').show()"
+                                         update=":dlgMedicamentoForm" />
+                    </p:toolbarGroup>
+
+                    <p:toolbarGroup align="right">
+                        <p:outputLabel for="filtroNome" value="Pesquisar por nome:" style="margin-right:5px" />
+                        <p:inputText id="filtroNome" value="#{medicamentoBean.nomeFiltro}" placeholder="Digite o nome..." />
+                        <p:commandButton value="Pesquisar" icon="pi pi-search"
+                                         action="#{medicamentoBean.buscarComFiltro}"
+                                         update="@form" 
+                                         process="@form"
+                                         style="margin-left:5px" />
+                    </p:toolbarGroup>
+                </p:toolbar>
+
+                <!-- Tabela de medicamentos -->
+                <p:dataTable value="#{medicamentoBean.lazyMedicamentos}"
+                    var="m"
+                    paginator="true"
+                    rows="10"
+                    lazy="true"
+                    paginatorPosition="bottom"
+                    rowsPerPageTemplate="10,20,50,100"
+                    currentPageReportTemplate="Mostrando {startRecord} a {endRecord} de {totalRecords} registros">
+
+
+                    <p:column headerText="ID" style="width:80px;text-align:center;">#{m.idMedicamento}</p:column>
+
+                    <p:column headerText="Nome">#{m.nome}</p:column>
+
+                    <p:column headerText="Controlado" style="width:120px;text-align:center;">
+                        <h:outputText value="#{m.controlado == 1 ? 'Sim' : 'Não'}" />
+                    </p:column>
+
+                    <p:column headerText="Posologia">#{m.posologia}</p:column>
+
+                    <p:column headerText="Data Cadastro">
+                        <h:outputText value="#{m.dataCadastro}" converter="localDateTimeConverter" />
+                    </p:column>
+
+                    <p:column headerText="Ações" style="width:180px;text-align:center;">
+                        <p:commandButton icon="pi pi-pencil" title="Editar"
+                                        action="#{medicamentoBean.editar(m)}"
+                                        update=":dlgMedicamentoForm"
+                                        oncomplete="PF('dlgMedicamento').show()"
+                                        value="Editar"/>
+
+                        <p:spacer width="8" />
+
+                        <p:commandButton icon="pi pi-trash" title="Excluir"
+                                        action="#{medicamentoBean.excluir(m)}"
+                                        update="@form"
+                                        process="@this"
+                                        styleClass="ui-button-danger"
+                                        value="Excluir"/>
+                    </p:column>
+                </p:dataTable>
+
+            </p:panel>
+        </h:form>
+
+        <!-- Diálogo de cadastro/edição -->
+        <p:dialog id="dlgMedicamento" header="Medicamento"
+                  widgetVar="dlgMedicamento"
+                  modal="true" resizable="false" closable="true">
+
+            <h:form id="dlgMedicamentoForm">
+                <p:panelGrid columns="2" style="width:100%" columnClasses="label,value">
+
+                    <p:outputLabel for="nome" value="Nome:"/>
+                    <p:inputText id="nome"
+                                 value="#{medicamentoBean.medicamento.nome}"
+                                 required="true"
+                                 requiredMessage="O nome é obrigatório." />
+
+                    <p:outputLabel for="controlado" value="Controlado:"/>
+                    <p:selectOneMenu id="controlado"
+                                    value="#{medicamentoBean.medicamento.controlado}"
+                                    required="true"
+                                    requiredMessage="O campo 'Controlado' é obrigatório." >
+                        <f:selectItem itemLabel="Selecione..." itemValue="#{null}" noSelectionOption="true" />
+                        <f:selectItem itemLabel="Sim" itemValue="1" />
+                        <f:selectItem itemLabel="Não" itemValue="0" />
+                    </p:selectOneMenu>
+
+                    <p:outputLabel for="posologia" value="Posologia:"/>
+                    <p:inputTextarea id="posologia"
+                                     value="#{medicamentoBean.medicamento.posologia}"
+                                     rows="3" cols="30"
+                                     maxlength="255"
+                                     autoResize="true" />
+                </p:panelGrid>
+
+                <p:separator style="margin:10px 0" />
+
+                <p:commandButton value="Salvar" icon="pi pi-save"
+                                 action="#{medicamentoBean.salvar}"
+                                 update=":formMedicamento,:dlgMedicamentoForm"
+                                 oncomplete="PF('dlgMedicamento').hide()" />
+
+                <p:commandButton value="Cancelar" icon="pi pi-times"
+                                 type="button"
+                                 onclick="PF('dlgMedicamento').hide()" />
+            </h:form>
+        </p:dialog>
+    </ui:define>
+
+</ui:composition>

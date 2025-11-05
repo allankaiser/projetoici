@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <title>Sistema de Clínica</title>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+    <h:outputStylesheet name="themes/nova-light/theme.css" library="primefaces" />
+    <h:outputStylesheet name="primefaces.css" library="primefaces" />
+
+    <style>
+        body {
+            font-family: "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background-color: #007ad9;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .menu-item {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 8px;
+            color: white;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .sidebar .menu-item:hover {
+            background-color: #005fa3;
+            cursor: pointer;
+        }
+
+        .sidebar .menu-item i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Conteúdo */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            background-color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .main {
+            padding: 25px;
+            overflow-y: auto;
+            flex: 1;
+        }
+    </style>
+</h:head>
+
+<h:body>
+
+    <div class="sidebar">
+        <h2>🏥 Projeto teste ICI </h2>
+
+        <h:form>
+            <p:commandLink action="/index.xhtml?faces-redirect=true" styleClass="menu-item">
+                <i class="pi pi-home"></i> <span>Início</span>
+            </p:commandLink>
+
+            <p:commandLink action="/paciente/paciente-list.xhtml?faces-redirect=true" styleClass="menu-item">
+                <i class="pi pi-users"></i> <span>Pacientes</span>
+            </p:commandLink>
+
+            <p:commandLink action="/medicamento/medicamento-list.xhtml?faces-redirect=true" styleClass="menu-item">
+                <i class="pi pi-briefcase"></i> <span>Medicamentos</span>
+            </p:commandLink>
+
+            <p:commandLink action="/receita/receita-list.xhtml?faces-redirect=true" styleClass="menu-item">
+                <i class="pi pi-file-edit"></i> <span>Receitas</span>
+            </p:commandLink>
+
+            <p:commandLink action="/relatorio/relatorio-medicamentos.xhtml?faces-redirect=true" styleClass="menu-item">
+                <i class="pi pi-file-edit"></i> <span>Relatórios</span>
+            </p:commandLink>
+            
+            <p:commandLink action="/relatorio/relatorio-aba.xhtml?faces-redirect=true" styleClass="menu-item">
+                <i class="pi pi-file-edit"></i> <span>Top 2 Medicamentos</span>
+            </p:commandLink>
+
+        </h:form>
+    </div>
+
+    <div class="content">
+        <div class="topbar">
+            <ui:insert name="titulo">Painel do Sistema</ui:insert>
+        </div>
+        <div class="main">
+            <ui:insert name="conteudo">Conteúdo aqui...</ui:insert>
+        </div>
+    </div>
+
+</h:body>
+</html>

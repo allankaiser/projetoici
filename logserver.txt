@@ -1,0 +1,574 @@
+C:\kitDesenvolvimento\projeto\projetoici\target\projeto-teste.war --force"
+que contem o novo .war contemplando o bean que informei e no console do servidor saiu: 17:21:38,909 INFO  [org.jboss.as.repository] (management-handler-thread - 2) WFLYDR0001: Content added at location C:\kitDesenvolvimento\instaladoires\wildfly-13.0.0.Final\standalone\data\content\d1\8d4abb865a4cf469969f620092260de8f0ac5e\content 
+17:21:38,912 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 113) WFLYUT0022: Unregistered web context: '/projeto-teste' from server 'default-server'
+17:21:38,930 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:38,934 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:39,039 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment projeto-teste.war (runtime-name: projeto-teste.war) in 128ms
+17:21:39,043 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "projeto-teste.war" (runtime-name: "projeto-teste.war")
+17:21:39,497 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) WFLYJPA0002: Read persistence.xml for ProjetoTestePU
+17:21:39,572 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:39,573 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 124) HHH000204: Processing PersistenceUnitInfo 
+[
+        name: ProjetoTestePU
+        ...]
+17:21:39,609 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment projeto-teste.war
+17:21:39,639 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'PacienteService' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/PacienteService!com.exemplo.service.PacienteService
+        java:app/projeto-teste/PacienteService!com.exemplo.service.PacienteService
+        java:module/PacienteService!com.exemplo.service.PacienteService
+        ejb:projeto-teste/PacienteService!com.exemplo.service.PacienteService
+        java:global/projeto-teste/PacienteService
+        java:app/projeto-teste/PacienteService
+        java:module/PacienteService
+
+17:21:39,640 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'MedicamentoService' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/MedicamentoService!com.exemplo.service.MedicamentoService
+        java:app/projeto-teste/MedicamentoService!com.exemplo.service.MedicamentoService
+        java:module/MedicamentoService!com.exemplo.service.MedicamentoService
+        ejb:projeto-teste/MedicamentoService!com.exemplo.service.MedicamentoService
+        java:global/projeto-teste/MedicamentoService
+        java:app/projeto-teste/MedicamentoService
+        java:module/MedicamentoService
+
+17:21:39,642 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'ReceitaService' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/ReceitaService!com.exemplo.service.ReceitaService
+        java:app/projeto-teste/ReceitaService!com.exemplo.service.ReceitaService
+        java:module/ReceitaService!com.exemplo.service.ReceitaService
+        ejb:projeto-teste/ReceitaService!com.exemplo.service.ReceitaService
+        java:global/projeto-teste/ReceitaService
+        java:app/projeto-teste/ReceitaService
+        java:module/ReceitaService
+
+17:21:39,643 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'MedicamentoDAO' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        java:app/projeto-teste/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        java:module/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        ejb:projeto-teste/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        java:global/projeto-teste/MedicamentoDAO
+        java:app/projeto-teste/MedicamentoDAO
+        java:module/MedicamentoDAO
+
+17:21:39,645 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'PacienteDAO' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/PacienteDAO!com.exemplo.dao.PacienteDAO
+        java:app/projeto-teste/PacienteDAO!com.exemplo.dao.PacienteDAO
+        java:module/PacienteDAO!com.exemplo.dao.PacienteDAO
+        ejb:projeto-teste/PacienteDAO!com.exemplo.dao.PacienteDAO
+        java:global/projeto-teste/PacienteDAO
+        java:app/projeto-teste/PacienteDAO
+        java:module/PacienteDAO
+
+17:21:39,647 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'ReceitaDAO' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        java:app/projeto-teste/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        java:module/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        ejb:projeto-teste/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        java:global/projeto-teste/ReceitaDAO
+        java:app/projeto-teste/ReceitaDAO
+        java:module/ReceitaDAO
+
+17:21:39,996 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:39,998 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 124) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:21:40,018 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 124) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+17:21:40,019 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 124) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@17b6cd63
+17:21:40,022 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 124) Envers integration enabled? : true
+17:21:40,094 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 124) HHH000475: Cannot locate column information using identifier [lower((nome)::text)]; ignoring index [idx_paciente_nome]
+17:21:40,209 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-6) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!
+17:21:40,211 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-6) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.hibernate.validator.internal.cdi.interceptor.ValidationInterceptor is deprecated from CDI 1.1!
+17:21:40,214 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-6) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.jberet.creation.BatchBeanProducer is deprecated from CDI 1.1!
+17:21:40,586 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-6) MSC000001: Failed to start service jboss.deployment.unit."projeto-teste.war".WeldStartService: org.jboss.msc.service.StartException in service jboss.deployment.unit."projeto-teste.war".WeldStartService: Failed to start service
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1728)
+        at org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1556)
+        at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+        at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1985)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1487)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1378)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.MalformedParameterizedTypeException
+        at sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl.validateConstructorArguments(ParameterizedTypeImpl.java:58)
+        at sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl.<init>(ParameterizedTypeImpl.java:51)
+        at sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl.make(ParameterizedTypeImpl.java:92)
+        at sun.reflect.generics.factory.CoreReflectionFactory.makeParameterizedType(CoreReflectionFactory.java:105)
+        at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:140)
+        at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+        at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:108)
+        at java.lang.Class.getGenericInterfaces(Class.java:913)
+        at org.jboss.weld.util.reflection.HierarchyDiscovery.discoverInterfaces(HierarchyDiscovery.java:145)
+        at org.jboss.weld.util.reflection.HierarchyDiscovery.discoverFromClass(HierarchyDiscovery.java:141)
+        at org.jboss.weld.util.reflection.HierarchyDiscovery.discoverTypes(HierarchyDiscovery.java:113)
+        at org.jboss.weld.util.reflection.HierarchyDiscovery.<init>(HierarchyDiscovery.java:94)
+        at org.jboss.weld.util.reflection.HierarchyDiscovery.<init>(HierarchyDiscovery.java:87)
+        at org.jboss.weld.annotated.enhanced.TypeClosureLazyValueHolder.computeValue(TypeClosureLazyValueHolder.java:41)
+        at org.jboss.weld.annotated.enhanced.TypeClosureLazyValueHolder.computeValue(TypeClosureLazyValueHolder.java:31)
+        at org.jboss.weld.util.LazyValueHolder.get(LazyValueHolder.java:46)
+        at org.jboss.weld.annotated.slim.backed.BackedAnnotated.getTypeClosure(BackedAnnotated.java:27)
+        at org.jboss.weld.annotated.enhanced.jlr.AbstractEnhancedAnnotated.getTypeClosure(AbstractEnhancedAnnotated.java:201)
+        at org.jboss.weld.util.Beans.getTypes(Beans.java:417)
+        at org.jboss.weld.bean.attributes.BeanAttributesFactory$BeanAttributesBuilder.<init>(BeanAttributesFactory.java:100)
+        at org.jboss.weld.bean.attributes.BeanAttributesFactory.forBean(BeanAttributesFactory.java:65)
+        at org.jboss.weld.bootstrap.AbstractBeanDeployer.createManagedBean(AbstractBeanDeployer.java:279)
+        at org.jboss.weld.bootstrap.BeanDeployer.createClassBean(BeanDeployer.java:221)
+        at org.jboss.weld.bootstrap.ConcurrentBeanDeployer$2.doWork(ConcurrentBeanDeployer.java:68)
+        at org.jboss.weld.bootstrap.ConcurrentBeanDeployer$2.doWork(ConcurrentBeanDeployer.java:65)
+        at org.jboss.weld.executor.IterativeWorkerTaskFactory$1.call(IterativeWorkerTaskFactory.java:62)
+        at org.jboss.weld.executor.IterativeWorkerTaskFactory$1.call(IterativeWorkerTaskFactory.java:55)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:485)
+
+17:21:40,594 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 2) WFLYCTL0013: Operation ("full-replace-deployment") failed - address: (undefined) - failure description: {
+    "WFLYCTL0080: Failed services" => {"jboss.deployment.unit.\"projeto-teste.war\".WeldStartService" => "Failed to start service
+    Caused by: java.lang.reflect.MalformedParameterizedTypeException"},
+    "WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+        "Services that were unable to start:" => [
+            "jboss.deployment.unit.\"projeto-teste.war\".CdiValidatorFactoryService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"com.sun.faces.config.ConfigureListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacesServlet\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacetTag\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV\".WeldInstantiator",    
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.ScriptFreeTLV\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.application.resource.DynamicResourcesPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.component.autoupdate.AutoUpdatePhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.util.AutoUpdateComponentPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldInitialListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldTerminalListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".weld.weldClassIntrospector"
+        ],
+        "Services that may be the cause:" => [
+            "jboss.clustering.web.route.default-server",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"com.sun.faces.config.ConfigureListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"com.sun.faces.config.ConfigureListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacesServlet\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacesServlet\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacetTag\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacetTag\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV\".WeldInstantiator",    
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.ScriptFreeTLV\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.ScriptFreeTLV\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.application.resource.DynamicResourcesPhaseListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.application.resource.DynamicResourcesPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.component.autoupdate.AutoUpdatePhaseListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.component.autoupdate.AutoUpdatePhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.util.AutoUpdateComponentPhaseListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.util.AutoUpdateComponentPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldInitialListener\".START",        
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldInitialListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldTerminalListener\".START",       
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldTerminalListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".ee.ComponentRegistry",
+            "jboss.deployment.unit.\"projeto-teste.war\".weld.weldClassIntrospector",
+            "jboss.iiop-openjdk.poa-service.rootpoa",
+            "jboss.txn.service.remote",
+            "jboss.undertow.deployment.default-server.default-host./projeto-teste",
+            "jboss.undertow.deployment.default-server.default-host./projeto-teste.UndertowDeploymentInfoService",
+            "jboss.xts.handlers",
+            "org.wildfly.clustering.cache.default-service-provider-registry.ejb",
+            "org.wildfly.clustering.cache.default-service-provider-registry.web",
+            "org.wildfly.clustering.cache.group.ejb.passivation",
+            "org.wildfly.clustering.cache.group.hibernate.entity",
+            "org.wildfly.clustering.cache.group.hibernate.local-query",
+            "org.wildfly.clustering.cache.group.hibernate.timestamps",
+            "org.wildfly.clustering.cache.group.server.client-mappings",
+            "org.wildfly.clustering.cache.group.server.default",
+            "org.wildfly.clustering.cache.group.web.client-mappings",
+            "org.wildfly.clustering.cache.group.web.default-server",
+            "org.wildfly.clustering.cache.group.web.passivation",
+            "org.wildfly.clustering.cache.registry.ejb.passivation",
+            "org.wildfly.clustering.cache.registry.server.default",
+            "org.wildfly.clustering.cache.registry.web.passivation",
+            "org.wildfly.clustering.cache.registry-entry.ejb.passivation",
+            "org.wildfly.clustering.cache.registry-entry.hibernate.entity",
+            "org.wildfly.clustering.cache.registry-entry.hibernate.local-query",
+            "org.wildfly.clustering.cache.registry-entry.hibernate.timestamps",
+            "org.wildfly.clustering.cache.registry-entry.server.client-mappings",
+            "org.wildfly.clustering.cache.registry-entry.server.default",
+            "org.wildfly.clustering.cache.registry-entry.web.client-mappings",
+            "org.wildfly.clustering.cache.registry-entry.web.default-server",
+            "org.wildfly.clustering.cache.registry-entry.web.passivation",
+            "org.wildfly.clustering.cache.registry-factory.ejb.passivation",
+            "org.wildfly.clustering.cache.registry-factory.hibernate.entity",
+            "org.wildfly.clustering.cache.registry-factory.hibernate.local-query",
+            "org.wildfly.clustering.cache.registry-factory.hibernate.timestamps",
+            "org.wildfly.clustering.cache.registry-factory.server.client-mappings",
+            "org.wildfly.clustering.cache.registry-factory.server.default",
+            "org.wildfly.clustering.cache.registry-factory.web.client-mappings",
+            "org.wildfly.clustering.cache.registry-factory.web.default-server",
+            "org.wildfly.clustering.cache.registry-factory.web.passivation",
+            "org.wildfly.clustering.cache.service-provider-registry.ejb.client-mappings",
+            "org.wildfly.clustering.cache.service-provider-registry.ejb.passivation",
+            "org.wildfly.clustering.cache.service-provider-registry.hibernate.entity",
+            "org.wildfly.clustering.cache.service-provider-registry.hibernate.local-query",
+            "org.wildfly.clustering.cache.service-provider-registry.hibernate.timestamps",
+            "org.wildfly.clustering.cache.service-provider-registry.server.client-mappings",
+            "org.wildfly.clustering.cache.service-provider-registry.server.default",
+            "org.wildfly.clustering.cache.service-provider-registry.web.client-mappings",
+            "org.wildfly.clustering.cache.service-provider-registry.web.default-server",
+            "org.wildfly.clustering.cache.service-provider-registry.web.passivation",
+            "org.wildfly.clustering.command-dispatcher-factory.ejb",
+            "org.wildfly.clustering.command-dispatcher-factory.hibernate",
+            "org.wildfly.clustering.command-dispatcher-factory.local",
+            "org.wildfly.clustering.command-dispatcher-factory.server",
+            "org.wildfly.clustering.command-dispatcher-factory.web",
+            "org.wildfly.clustering.default-command-dispatcher-factory",
+            "org.wildfly.clustering.group.hibernate",
+            "org.wildfly.clustering.group.server",
+            "org.wildfly.clustering.group.web",
+            "org.wildfly.clustering.infinispan.cache.ejb.passivation",
+            "org.wildfly.clustering.infinispan.cache.hibernate.entity",
+            "org.wildfly.clustering.infinispan.cache.hibernate.local-query",
+            "org.wildfly.clustering.infinispan.cache.hibernate.timestamps",
+            "org.wildfly.clustering.infinispan.cache.server.client-mappings",
+            "org.wildfly.clustering.infinispan.cache.server.default",
+            "org.wildfly.clustering.infinispan.cache.store.hibernate.entity",
+            "org.wildfly.clustering.infinispan.cache.store.hibernate.local-query",
+            "org.wildfly.clustering.infinispan.cache.store.hibernate.timestamps",
+            "org.wildfly.clustering.infinispan.cache.store.server.default",
+            "org.wildfly.clustering.infinispan.cache.store.web.passivation",
+            "org.wildfly.clustering.infinispan.cache.web.client-mappings",
+            "org.wildfly.clustering.infinispan.cache.web.default-server",
+            "org.wildfly.clustering.infinispan.cache.web.passivation",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.client-mappings",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.client-mappings",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.default-server",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.write",
+            "org.wildfly.clustering.infinispan.cache-container.hibernate",
+            "org.wildfly.clustering.infinispan.cache-container.server",
+            "org.wildfly.clustering.infinispan.cache-container.web",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.hibernate",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.hibernate.transport",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.server",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.server.transport",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.web",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.web.transport",
+            "org.wildfly.clustering.infinispan.default-cache.ejb",
+            "org.wildfly.clustering.infinispan.default-cache.web",
+            "org.wildfly.clustering.infinispan.default-cache-configuration.server",
+            "org.wildfly.clustering.infinispan.default-cache-configuration.web"
+        ]
+    }
+}
+17:21:40,616 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:40,618 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:40,656 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment projeto-teste.war (runtime-name: projeto-teste.war) in 43ms
+17:21:40,658 ERROR [org.jboss.as.server] (management-handler-thread - 2) WFLYSRV0014: Replacement of deployment "projeto-teste.war" by deployment "projeto-teste.war" was rolled back with the following failure message:
+{
+    "WFLYCTL0080: Failed services" => {"jboss.deployment.unit.\"projeto-teste.war\".WeldStartService" => "Failed to start service
+    Caused by: java.lang.reflect.MalformedParameterizedTypeException"},
+    "WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+        "Services that were unable to start:" => [
+            "jboss.deployment.unit.\"projeto-teste.war\".CdiValidatorFactoryService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"com.sun.faces.config.ConfigureListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacesServlet\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacetTag\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV\".WeldInstantiator",    
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.ScriptFreeTLV\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.application.resource.DynamicResourcesPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.component.autoupdate.AutoUpdatePhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.util.AutoUpdateComponentPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldInitialListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldTerminalListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".weld.weldClassIntrospector"
+        ],
+        "Services that may be the cause:" => [
+            "jboss.clustering.web.route.default-server",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.MedicamentoService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.PacienteService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaDAO.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.ReceitaService.WeldInterceptorBindingsService",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"com.sun.faces.config.ConfigureListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"com.sun.faces.config.ConfigureListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacesServlet\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacesServlet\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacetTag\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.faces.webapp.FacetTag\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV\".WeldInstantiator",    
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.ScriptFreeTLV\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"javax.servlet.jsp.jstl.tlv.ScriptFreeTLV\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.application.resource.DynamicResourcesPhaseListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.application.resource.DynamicResourcesPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.component.autoupdate.AutoUpdatePhaseListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.component.autoupdate.AutoUpdatePhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.util.AutoUpdateComponentPhaseListener\".START",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"managed-bean.org.primefaces.util.AutoUpdateComponentPhaseListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldInitialListener\".START",        
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldInitialListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldTerminalListener\".START",       
+            "jboss.deployment.unit.\"projeto-teste.war\".component.\"org.jboss.weld.module.web.servlet.WeldTerminalListener\".WeldInstantiator",
+            "jboss.deployment.unit.\"projeto-teste.war\".ee.ComponentRegistry",
+            "jboss.deployment.unit.\"projeto-teste.war\".weld.weldClassIntrospector",
+            "jboss.iiop-openjdk.poa-service.rootpoa",
+            "jboss.txn.service.remote",
+            "jboss.undertow.deployment.default-server.default-host./projeto-teste",
+            "jboss.undertow.deployment.default-server.default-host./projeto-teste.UndertowDeploymentInfoService",
+            "jboss.xts.handlers",
+            "org.wildfly.clustering.cache.default-service-provider-registry.ejb",
+            "org.wildfly.clustering.cache.default-service-provider-registry.web",
+            "org.wildfly.clustering.cache.group.ejb.passivation",
+            "org.wildfly.clustering.cache.group.hibernate.entity",
+            "org.wildfly.clustering.cache.group.hibernate.local-query",
+            "org.wildfly.clustering.cache.group.hibernate.timestamps",
+            "org.wildfly.clustering.cache.group.server.client-mappings",
+            "org.wildfly.clustering.cache.group.server.default",
+            "org.wildfly.clustering.cache.group.web.client-mappings",
+            "org.wildfly.clustering.cache.group.web.default-server",
+            "org.wildfly.clustering.cache.group.web.passivation",
+            "org.wildfly.clustering.cache.registry.ejb.passivation",
+            "org.wildfly.clustering.cache.registry.server.default",
+            "org.wildfly.clustering.cache.registry.web.passivation",
+            "org.wildfly.clustering.cache.registry-entry.ejb.passivation",
+            "org.wildfly.clustering.cache.registry-entry.hibernate.entity",
+            "org.wildfly.clustering.cache.registry-entry.hibernate.local-query",
+            "org.wildfly.clustering.cache.registry-entry.hibernate.timestamps",
+            "org.wildfly.clustering.cache.registry-entry.server.client-mappings",
+            "org.wildfly.clustering.cache.registry-entry.server.default",
+            "org.wildfly.clustering.cache.registry-entry.web.client-mappings",
+            "org.wildfly.clustering.cache.registry-entry.web.default-server",
+            "org.wildfly.clustering.cache.registry-entry.web.passivation",
+            "org.wildfly.clustering.cache.registry-factory.ejb.passivation",
+            "org.wildfly.clustering.cache.registry-factory.hibernate.entity",
+            "org.wildfly.clustering.cache.registry-factory.hibernate.local-query",
+            "org.wildfly.clustering.cache.registry-factory.hibernate.timestamps",
+            "org.wildfly.clustering.cache.registry-factory.server.client-mappings",
+            "org.wildfly.clustering.cache.registry-factory.server.default",
+            "org.wildfly.clustering.cache.registry-factory.web.client-mappings",
+            "org.wildfly.clustering.cache.registry-factory.web.default-server",
+            "org.wildfly.clustering.cache.registry-factory.web.passivation",
+            "org.wildfly.clustering.cache.service-provider-registry.ejb.client-mappings",
+            "org.wildfly.clustering.cache.service-provider-registry.ejb.passivation",
+            "org.wildfly.clustering.cache.service-provider-registry.hibernate.entity",
+            "org.wildfly.clustering.cache.service-provider-registry.hibernate.local-query",
+            "org.wildfly.clustering.cache.service-provider-registry.hibernate.timestamps",
+            "org.wildfly.clustering.cache.service-provider-registry.server.client-mappings",
+            "org.wildfly.clustering.cache.service-provider-registry.server.default",
+            "org.wildfly.clustering.cache.service-provider-registry.web.client-mappings",
+            "org.wildfly.clustering.cache.service-provider-registry.web.default-server",
+            "org.wildfly.clustering.cache.service-provider-registry.web.passivation",
+            "org.wildfly.clustering.command-dispatcher-factory.ejb",
+            "org.wildfly.clustering.command-dispatcher-factory.hibernate",
+            "org.wildfly.clustering.command-dispatcher-factory.local",
+            "org.wildfly.clustering.command-dispatcher-factory.server",
+            "org.wildfly.clustering.command-dispatcher-factory.web",
+            "org.wildfly.clustering.default-command-dispatcher-factory",
+            "org.wildfly.clustering.group.hibernate",
+            "org.wildfly.clustering.group.server",
+            "org.wildfly.clustering.group.web",
+            "org.wildfly.clustering.infinispan.cache.ejb.passivation",
+            "org.wildfly.clustering.infinispan.cache.hibernate.entity",
+            "org.wildfly.clustering.infinispan.cache.hibernate.local-query",
+            "org.wildfly.clustering.infinispan.cache.hibernate.timestamps",
+            "org.wildfly.clustering.infinispan.cache.server.client-mappings",
+            "org.wildfly.clustering.infinispan.cache.server.default",
+            "org.wildfly.clustering.infinispan.cache.store.hibernate.entity",
+            "org.wildfly.clustering.infinispan.cache.store.hibernate.local-query",
+            "org.wildfly.clustering.infinispan.cache.store.hibernate.timestamps",
+            "org.wildfly.clustering.infinispan.cache.store.server.default",
+            "org.wildfly.clustering.infinispan.cache.store.web.passivation",
+            "org.wildfly.clustering.infinispan.cache.web.client-mappings",
+            "org.wildfly.clustering.infinispan.cache.web.default-server",
+            "org.wildfly.clustering.infinispan.cache.web.passivation",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.entity.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.local-query.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.hibernate.timestamps.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.client-mappings",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.server.default.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.client-mappings",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.default-server",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.expiration",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.locking",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.memory",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.transaction",
+            "org.wildfly.clustering.infinispan.cache-configuration.web.passivation.write",
+            "org.wildfly.clustering.infinispan.cache-container.hibernate",
+            "org.wildfly.clustering.infinispan.cache-container.server",
+            "org.wildfly.clustering.infinispan.cache-container.web",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.hibernate",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.hibernate.transport",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.server",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.server.transport",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.web",
+            "org.wildfly.clustering.infinispan.cache-container-configuration.web.transport",
+            "org.wildfly.clustering.infinispan.default-cache.ejb",
+            "org.wildfly.clustering.infinispan.default-cache.web",
+            "org.wildfly.clustering.infinispan.default-cache-configuration.server",
+            "org.wildfly.clustering.infinispan.default-cache-configuration.web"
+        ]
+    }
+}
+17:21:40,658 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "projeto-teste.war" (runtime-name: "projeto-teste.war")
+17:21:41,026 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for ProjetoTestePU
+17:21:41,101 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 128) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:41,102 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 128) HHH000204: Processing PersistenceUnitInfo 
+[
+        name: ProjetoTestePU
+        ...]
+17:21:41,174 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment projeto-teste.war
+17:21:41,199 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'PacienteService' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/PacienteService!com.exemplo.service.PacienteService
+        java:app/projeto-teste/PacienteService!com.exemplo.service.PacienteService
+        java:module/PacienteService!com.exemplo.service.PacienteService
+        ejb:projeto-teste/PacienteService!com.exemplo.service.PacienteService
+        java:global/projeto-teste/PacienteService
+        java:app/projeto-teste/PacienteService
+        java:module/PacienteService
+
+17:21:41,200 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'MedicamentoService' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/MedicamentoService!com.exemplo.service.MedicamentoService
+        java:app/projeto-teste/MedicamentoService!com.exemplo.service.MedicamentoService
+        java:module/MedicamentoService!com.exemplo.service.MedicamentoService
+        ejb:projeto-teste/MedicamentoService!com.exemplo.service.MedicamentoService
+        java:global/projeto-teste/MedicamentoService
+        java:app/projeto-teste/MedicamentoService
+        java:module/MedicamentoService
+
+17:21:41,201 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'ReceitaService' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/ReceitaService!com.exemplo.service.ReceitaService
+        java:app/projeto-teste/ReceitaService!com.exemplo.service.ReceitaService
+        java:module/ReceitaService!com.exemplo.service.ReceitaService
+        ejb:projeto-teste/ReceitaService!com.exemplo.service.ReceitaService
+        java:global/projeto-teste/ReceitaService
+        java:app/projeto-teste/ReceitaService
+        java:module/ReceitaService
+
+17:21:41,202 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'MedicamentoDAO' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        java:app/projeto-teste/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        java:module/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        ejb:projeto-teste/MedicamentoDAO!com.exemplo.dao.MedicamentoDAO
+        java:global/projeto-teste/MedicamentoDAO
+        java:app/projeto-teste/MedicamentoDAO
+        java:module/MedicamentoDAO
+
+17:21:41,203 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'PacienteDAO' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/PacienteDAO!com.exemplo.dao.PacienteDAO
+        java:app/projeto-teste/PacienteDAO!com.exemplo.dao.PacienteDAO
+        java:module/PacienteDAO!com.exemplo.dao.PacienteDAO
+        ejb:projeto-teste/PacienteDAO!com.exemplo.dao.PacienteDAO
+        java:global/projeto-teste/PacienteDAO
+        java:app/projeto-teste/PacienteDAO
+        java:module/PacienteDAO
+
+17:21:41,204 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'ReceitaDAO' in deployment unit 'deployment "projeto-teste.war"' are as follows:
+
+        java:global/projeto-teste/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        java:app/projeto-teste/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        java:module/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        ejb:projeto-teste/ReceitaDAO!com.exemplo.dao.ReceitaDAO
+        java:global/projeto-teste/ReceitaDAO
+        java:app/projeto-teste/ReceitaDAO
+        java:module/ReceitaDAO
+
+17:21:41,491 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 128) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'projeto-teste.war#ProjetoTestePU'
+17:21:41,492 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 128) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:21:41,507 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 128) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+17:21:41,508 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 128) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@17b6cd63
+17:21:41,510 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 128) Envers integration enabled? : true
+17:21:41,573 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 128) HHH000475: Cannot locate column information using identifier [lower((nome)::text)]; ignoring index [idx_paciente_nome]
+17:21:41,663 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-1) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!
+17:21:41,664 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-1) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.hibernate.validator.internal.cdi.interceptor.ValidationInterceptor is deprecated from CDI 1.1!
+17:21:41,666 WARN  [org.jboss.weld.Bootstrap] (MSC service thread 1-1) WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.jberet.creation.BatchBeanProducer is deprecated from CDI 1.1!
+17:21:41,834 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 123) Inicializando Mojarra 2.2.13.SP5  
+para o contexto '/projeto-teste'
+17:21:42,448 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 123) Running on PrimeFaces 6.2
+17:21:42,451 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 123) WFLYUT0021: Registered web context: '/projeto-teste' 
+for server 'default-server'
+17:21:42,454 INFO  [org.jboss.as.repository] (management-handler-thread - 2) WFLYDR0002: Content removed from location C:\kitDesenvolvimento\instaladoires\wildfly-13.0.0.Final\standalone\data\content\d1\8d4abb865a4cf469969f620092260de8f0ac5e\content
