@@ -11,7 +11,8 @@
         <h:form id="formRelatorio">
             <p:panel header="Relatório de Medicamentos Prescritos">
 
-                <p:panelGrid columns="2" columnClasses="ui-g-2,ui-g-10">
+                <p:panelGrid columns="3" columnClasses="label,value,button"
+                                    style="width:100%; margin-bottom:10px;">
                     <p:outputLabel for="paciente" value="Paciente:" />
                     <p:autoComplete id="paciente"
                                     value="#{relatorioMedicamentosBean.pacienteSelecionado}"
@@ -20,14 +21,20 @@
                                     itemLabel="#{p.nome}"
                                     itemValue="#{p}"
                                     converter="pacienteConverter"
-                                    placeholder="Selecione o paciente" />
+                                    placeholder="Digite o nome..." >
+                                    <!-- Atualiza o botão quando seleciona um paciente -->
+                        <p:ajax event="itemSelect" update="btnFiltrar" />
+                        <p:ajax event="clear" update="btnFiltrar" />
+                    </p:autoComplete>
+                    <p:commandButton id="btnFiltrar" 
+                                    value="Filtrar"
+                                    icon="pi pi-search"
+                                    actionListener="#{relatorioMedicamentosBean.filtrar}"
+                                    update="tabelaRelatorio msgs" 
+                                    disabled="#{relatorioMedicamentosBean.pacienteSelecionado == null}"/>
                 </p:panelGrid>
 
-                <p:commandButton value="Filtrar"
-                                 icon="pi pi-search"
-                                 actionListener="#{relatorioMedicamentosBean.filtrar}"
-                                 update="tabelaRelatorio msgs" />
-
+                
                 <p:messages id="msgs" autoUpdate="true" />
 
                 <p:dataTable id="tabelaRelatorio"
@@ -35,7 +42,7 @@
                              var="item"
                              paginator="true"
                              rows="10"
-                             emptyMessage="Nenhum resultado encontrado.">
+                             emptyMessage="#{relatorioMedicamentosBean.pacienteSelecionado == null ? 'Selecione um paciente e clique em Filtrar para visualizar os resultados' : 'Nenhum resultado encontrado para o paciente selecionado'}">
 
                     <p:column headerText="Paciente">
                         <h:outputText value="#{item.nomePaciente}" />

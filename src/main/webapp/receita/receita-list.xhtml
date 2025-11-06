@@ -41,7 +41,6 @@
                     <!-- Painel principal -->
                     <p:panel header="Dados da Receita" style="margin-bottom:10px">
                         <p:panelGrid columns="2" columnClasses="label,value" style="width:100%" cellpadding="5">
-                            
                             <!-- Paciente -->
                             <p:outputLabel for="paciente" value="Paciente:" style="width:120px" />
                             <p:autoComplete id="paciente"
@@ -56,11 +55,7 @@
                                             placeholder="Digite o nome do paciente..."
                                             minQueryLength="2"
                                             cache="false"
-                                            scrollHeight="300"
-                                            style="width:100%" />
-
-                            
-                            
+                                            scrollHeight="300" />
                         </p:panelGrid>
                     </p:panel>
 
@@ -83,13 +78,12 @@
                                             placeholder="Digite o medicamento..."
                                             minQueryLength="2"
                                             cache="false"
-                                            scrollHeight="300"
-                                            style="width:100%" />
+                                            scrollHeight="300" />
 
                             <p:commandButton value="Adicionar"
                                             icon="pi pi-plus"
                                             action="#{receitaBean.adicionarItem}"
-                                            update="itensReceita"
+                                            update="itensReceita medicamento"
                                             process="@form"
                                             styleClass="p-button-outlined p-button-info"
                                             style="margin-left:5px; white-space:nowrap;" />

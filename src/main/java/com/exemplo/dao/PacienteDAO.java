@@ -36,15 +36,22 @@ public class PacienteDAO {
         return list.isEmpty() ? null : list.get(0);
     }
 
-    public List<Paciente> listar() {
-        return em.createQuery("SELECT p FROM Paciente p ORDER BY p.nome", Paciente.class)
-                 .getResultList();
+    public List<Paciente> listar(int first, int pageSize) {
+        TypedQuery<Paciente> q = em.createQuery("SELECT p FROM Paciente p ORDER BY p.nome", Paciente.class);
+        q.setFirstResult(first);
+        q.setMaxResults(pageSize);
+        return q.getResultList();
+    }
+
+    public Long count() {
+        TypedQuery<Long> q = em.createQuery("SELECT COUNT(p) FROM Paciente p", Long.class);
+        return q.getSingleResult();
     }
 
     public List<Paciente> buscarComFiltro(String nome, String cpf, int first, int pageSize) {
         String jpql = "SELECT p FROM Paciente p WHERE " +
-                    "(:nome = '' OR LOWER(p.nome) LIKE LOWER(CONCAT('%', :nome, '%'))) AND " +
-                    "(:cpf = '' OR p.cpf = :cpf) ORDER BY p.nome";
+                    "(:nome = '' OR LOWER(p.nome) LIKE LOWER(CONCAT('%', :nome, '%'))) AND " + 
+                    "(:cpf = '' OR p.cpf = :cpf) ORDER BY p.nome ";
 
         TypedQuery<Paciente> q = em.createQuery(jpql, Paciente.class);
 
@@ -83,9 +90,7 @@ public class PacienteDAO {
 
         return em.createQuery(
                 "SELECT p FROM Paciente p " +
-                "WHERE LOWER(p.nome) LIKE :filtro " +
-                "   OR p.cpf LIKE :filtro " +
-                "ORDER BY p.nome",
+                "WHERE LOWER(p.nome) LIKE :filtro " + "ORDER BY p.nome",
                 Paciente.class
             )
             .setParameter("filtro", filtroFormatado)

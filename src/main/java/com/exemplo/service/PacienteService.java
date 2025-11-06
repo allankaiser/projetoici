@@ -50,8 +50,12 @@ public class PacienteService {
         dao.excluir(p);
     }
 
-    public List<Paciente> listar() {
-        return dao.listar();
+    public List<Paciente> listar(int first, int pageSize) {
+        return dao.listar(first, pageSize);
+    }
+
+    public Long count() {
+        return dao.count();
     }
     
     public List<Paciente> buscarPorNomeOuCpf(String filtro) {

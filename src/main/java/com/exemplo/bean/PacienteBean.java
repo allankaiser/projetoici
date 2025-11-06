@@ -36,7 +36,16 @@ public class PacienteBean implements Serializable {
     public void init() {
         sexos = Arrays.asList("Masculino", "Feminino", "Outro");
         novo();
-        carregarLista();
+        listar();
+    }
+
+    public void listar() {
+        pacientes = service.listar(first, pageSize);
+        totalRecords = service.count();
+        
+        // Limpa filtros quando lista geral
+        nomeFiltro = null;
+        cpfFiltro = null;
     }
 
     public void novo() {
@@ -66,16 +75,19 @@ public class PacienteBean implements Serializable {
     public void salvar() {
         try {
             service.salvar(paciente);
-            carregarLista();
+            listar();
             novo();
-            FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Paciente salvo com sucesso!"));
+            //FacesContext.getCurrentInstance().addMessage(null,
+                //new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Paciente salvo com sucesso!"));
+            addMensagem("Paciente salvo com sucesso!", FacesMessage.SEVERITY_INFO);
         } catch (PersistenceException ex) {
-            FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", ex.getMessage()));
+            //FacesContext.getCurrentInstance().addMessage(null,
+                //new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", ex.getMessage()));
+                addMensagem(ex.getMessage(), FacesMessage.SEVERITY_ERROR);
         } catch (Exception e) {
-            FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", "Erro ao salvar paciente."));
+            //FacesContext.getCurrentInstance().addMessage(null,
+                //new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", "Erro ao salvar paciente."));
+            addMensagem(e.getMessage(), FacesMessage.SEVERITY_ERROR);
         }
     }
 
@@ -120,10 +132,16 @@ public class PacienteBean implements Serializable {
         this.sexos = sexos;
     }
 
+    private void addMensagem(String msg, FacesMessage.Severity severity) {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(severity, msg, null));
+    }
+
     public int getFirst() { return first; }
     public int getPageSize() { return pageSize; }
     public void setPageSize(int pageSize) { this.pageSize = pageSize; }
     public long getTotalRecords() { return totalRecords; }
+
+    
 }
 
     
